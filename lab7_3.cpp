@@ -2,7 +2,31 @@
 using namespace std;
 
 char before(char x){
-	//Write your function definition here
+	int i = 0,j = 0;
+	char a[26] = {}, y = x;
+	while(i < 26){
+		a[i] = 'A' + i;
+		i++;
+	}
+
+	// ทำการเช็ก
+	while (j < 26){
+		if (x == a[j]){
+			x -= 1;
+		}
+		j++;
+	}
+
+	// output
+	if (y == x){
+		return'0';
+
+	}else if(x == '@'){
+		return 'Z';
+
+	}else{
+		return x;
+	}
 }
 
 int main(){
